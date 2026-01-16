@@ -40,7 +40,7 @@ if not issues:
 print(f"Total number of issues in project \"{project.name}\" ({project_id}) [{org.name}]: {len(issues)}")
 
 # Prepare CSV output
-csv_filename = f"snyk_issues_without_jira_{project_id}.csv"
+csv_filename = f"output/snyk_issues_without_jira_{project_id}.csv"
 with open(csv_filename, mode="w", newline="") as csvfile:
     fieldnames = ["issue_id", "issue_url"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
